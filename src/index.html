@@ -1,13 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>JavaScript Sandbox</title>
+    <title>ALAB BOM</title>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/styles.css" />
   </head>
-
   <body>
-    <div id="app"></div>
+    <h1>Number Guessing Game</h1>
+    <p>
+      I'm thinking of a number between <code>1</code> and <code>100</code>. Can
+      you guess it?
+    </p>
+    <p>
+      You have <strong><span id="attempts">5</span> attempts</strong> remaining.
+    </p>
 
-    <script src="./index.mjs" type="module"></script>
+    <input
+      type="number"
+      id="userGuess"
+      min="1"
+      max="100"
+      placeholder="Enter a number"
+    />
+    <button id="guessBtn">Submit Guess</button>
+    <button id="restartBtn" style="display: none">Restart Game</button>
+    <p id="message"></p>
+    <script src="src/index.js"></script>
   </body>
 </html>
